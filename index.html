@@ -1273,7 +1273,7 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
   "logo": "https://jaynak.com/assets/img/app-icon.png",
   "image": "https://jaynak.com/assets/img/og.png",
   "description": "خدمة توصيل مندوبين داخل محافظة مسقط بسلطنة عمان: مستندات وطرود ومشاوير، بسعر يظهر قبل التأكيد وتتبّع لحظي على الخريطة.",
-  "email": "support@jaynak.com",
+  "email": "jayanikapp@gmail.com",
   "telephone": "+96898169943",
   "priceRange": "OMR 1.000 – OMR 10.000",
   "currenciesAccepted": "OMR",
@@ -1287,7 +1287,7 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
     "@type": "ContactPoint",
     "contactType": "دعم العملاء",
     "telephone": "+96898169943",
-    "email": "support@jaynak.com",
+    "email": "jayanikapp@gmail.com",
     "availableLanguage": ["ar"]
   },
   "hasOfferCatalog": {
@@ -1755,8 +1755,9 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
       <div class="about__aside" style="padding-block-start:0">
         <div class="about__note reveal" style="--rd:120ms">
           <h3>الإلغاء</h3>
-          <p>مجاني قبل أن يقبل المندوب الطلب. بعد القبول قد تُطبَّق رسوم إلغاء
-             قدرها <span class="ltr num">2</span> ر.ع.</p>
+          <p>مجاني قبل أن يقبل المندوب الطلب. بعد القبول تُخصم
+             <span class="ltr num" data-c="loyalty.cancelPenalty">20</span> نقطة من رصيد
+             ولائك — بلا أي رسوم مالية.</p>
         </div>
         <div class="about__note reveal" style="--rd:200ms">
           <h3>الدفع</h3>
@@ -1765,8 +1766,9 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
         </div>
         <div class="about__note reveal" style="--rd:280ms">
           <h3>نقاط الولاء</h3>
-          <p><span class="ltr num">10</span> نقاط ثابتة لكل طلب مكتمل، وعشر نقاط لكل ريال.
-             تُستبدل بتوصيل مجاني أو خصم أو رصيد محفظة، ولا تنتهي صلاحيتها.</p>
+          <p><span class="ltr num" data-c="loyalty.pointsPerOrder">10</span> نقاط ثابتة لكل
+             طلب مكتمل، و<span class="ltr num" data-c="loyalty.pointsPerRial">10</span> نقاط
+             لكل ريال. تُستبدل بتوصيل مجاني أو خصم أو رصيد محفظة، ولا تنتهي صلاحيتها.</p>
         </div>
       </div>
     </div>
@@ -1972,10 +1974,14 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
             <input id="notifyPhone" name="phone" type="tel" inputmode="numeric"
                    autocomplete="tel-national" placeholder="9XXX XXXX"
                    aria-describedby="notifyNote">
-            <button class="btn" type="submit">سجّلني</button>
+            <button class="btn" type="submit">
+              سجّلني
+              <svg width="16" height="16" aria-hidden="true"><use href="#i-chat"/></svg>
+            </button>
           </div>
           <p class="notify__note" id="notifyNote">
-            رقم عُماني مكوّن من <span class="ltr num">8</span> أرقام. نستخدمه للتبليغ عن الإطلاق فقط.
+            رقم عُماني من <span class="ltr num">8</span> أرقام. نفتح لك واتساب برسالة جاهزة —
+            أرسلها ونذكّرك أوّل ما ينزل التطبيق.
           </p>
           <div class="msg" id="notifyMsg" hidden></div>
         </form>
@@ -2023,11 +2029,11 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
           <span class="ltr num" data-c="contact.phone">+968 98169943</span>
         </span>
       </a>
-      <a class="contact" href="mailto:support@jaynak.com" data-c-href="mailto">
+      <a class="contact" href="mailto:jayanikapp@gmail.com" data-c-href="mailto">
         <span class="label">البريد</span>
         <span class="contact__val">
           <svg aria-hidden="true"><use href="#i-mail"/></svg>
-          <span class="ltr" data-c="contact.email">support@jaynak.com</span>
+          <span class="ltr" data-c="contact.email">jayanikapp@gmail.com</span>
         </span>
       </a>
       <div class="contact">
@@ -2085,7 +2091,7 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
         <ul>
           <li><a class="ltr num" href="tel:+96898169943" data-c-href="tel" data-c="contact.phone">+968 98169943</a></li>
           <li><a class="ltr" href="https://wa.me/96898169943" data-c-href="whatsapp" target="_blank" rel="noopener">واتساب</a></li>
-          <li><a class="ltr" href="mailto:support@jaynak.com" data-c-href="mailto" data-c="contact.email">support@jaynak.com</a></li>
+          <li><a class="ltr" href="mailto:jayanikapp@gmail.com" data-c-href="mailto" data-c="contact.email">jayanikapp@gmail.com</a></li>
           <li><a href="/terms.html">الشروط والأحكام</a></li>
           <li><a href="/privacy.html">سياسة الخصوصية</a></li>
         </ul>
@@ -2099,7 +2105,7 @@ body.has-cursor.cursor-hot .cursor-dot { opacity: 0; }
       <nav aria-label="روابط قانونية">
         <a href="/terms.html">الشروط</a>
         <a href="/privacy.html">الخصوصية</a>
-        <a href="mailto:support@jaynak.com">الدعم</a>
+        <a href="mailto:jayanikapp@gmail.com">الدعم</a>
       </nav>
     </div>
   </div>
@@ -2495,6 +2501,12 @@ window.JAYNAK_API = (() => {
      إذا ردّ الخادم. فلو تعذّر الاتصال يبقى الموقع كاملاً وصحيحاً —
      لا شاشة فارغة تنتظر شبكة. */
 
+  const notifyCfg = {
+    whatsapp: '96898169943',
+    waMessage: 'السلام عليكم، أبغى تذكير أوّل ما ينزل تطبيق جاينك على المتاجر.\nرقمي: {phone}',
+    confirm: 'ترقّب الإعلان قريباً — بنذكّرك أوّل ما ينزل التطبيق.',
+  };
+
   function applyContent(c) {
     const get = (path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), c);
 
@@ -2502,11 +2514,6 @@ window.JAYNAK_API = (() => {
       const v = get(el.dataset.c);
       if (v != null && v !== '') el.textContent = v;
     });
-    $$('[data-c-money]').forEach(el => {
-      const v = get(el.dataset.cMoney);
-      if (v != null && v !== '') el.textContent = Number(v).toFixed(3);
-    });
-
     // روابط التواصل تُبنى من القيم لا تُكتب مرّتين
     const phoneDigits = String(get('contact.phone') || '').replace(/\D/g, '');
     const wa = String(get('contact.whatsapp') || '').replace(/\D/g, '');
@@ -2517,6 +2524,10 @@ window.JAYNAK_API = (() => {
       if (kind === 'whatsapp' && wa) el.href = 'https://wa.me/' + wa;
       if (kind === 'mailto' && mail) el.href = 'mailto:' + mail;
     });
+
+    if (get('contact.whatsapp')) notifyCfg.whatsapp = get('contact.whatsapp');
+    if (get('notify.waMessage')) notifyCfg.waMessage = get('notify.waMessage');
+    if (get('notify.confirm')) notifyCfg.confirm = get('notify.confirm');
 
     // شارات المتاجر: الرابط يفعّلها ويشيل «قريباً»
     $$('[data-store]').forEach(el => {
@@ -2560,32 +2571,39 @@ window.JAYNAK_API = (() => {
       .catch(() => { /* الخادم غير متاح — نبقي محتوى الصفحة كما هو */ });
   }
 
-  /* ------------------------------------------- التبليغ عند الإطلاق */
+  /* ------------------------------------------- التبليغ عند الإطلاق
+
+     الزائر يكتب رقمه، فنفتح له واتساب على رقم جاينك برسالة جاهزة يرسلها.
+     الحفظ في الخادم محاولة جانبية: لو تعذّر لا يتعطّل شيء — الواتساب هو
+     المسار الفعلي، والرقم يصل حتى لو كان الخادم متوقّفاً. */
 
   const notifyForm = $('#notifyForm');
-  if (notifyForm && window.JaynakAPI) {
+  if (notifyForm) {
     const box = $('#notifyMsg'), input = $('#notifyPhone');
     const digits = (v) => String(v).replace(/[٠-٩۰-۹]/g, d => String(d.charCodeAt(0) & 0xf))
                                    .replace(/\D/g, '');
     input.addEventListener('input', () => { input.value = digits(input.value).slice(0, 8); });
 
-    notifyForm.addEventListener('submit', async e => {
+    notifyForm.addEventListener('submit', e => {
       e.preventDefault();
       const p = digits(input.value);
       const show = (text, kind) => {
-        box.hidden = false; box.className = 'msg msg--' + kind;
-        box.textContent = text;
+        box.hidden = false; box.className = 'msg msg--' + kind; box.textContent = text;
       };
       if (p.length !== 8) return show('رقم عُماني من 8 أرقام.', 'err');
-      const btn = notifyForm.querySelector('button');
-      btn.disabled = true;
-      try {
-        const out = await window.JaynakAPI.notify(p);
-        show(out.new ? 'تمّ. نبلّغك أوّل ما ينزل التطبيق.' : 'رقمك مسجّل عندنا من قبل.', 'ok');
-        notifyForm.reset();
-      } catch (ex) {
-        show(ex.message, 'err');
-      } finally { btn.disabled = false; }
+
+      const wa = String(notifyCfg.whatsapp || '').replace(/\D/g, '');
+      if (!wa) return show('رقم التواصل غير مضبوط. جرّب لاحقاً.', 'err');
+
+      const text = String(notifyCfg.waMessage).replace('{phone}', '+968 ' + p);
+      // النافذة تُفتح ضمن معالج الضغط مباشرة — أي انتظار قبلها يجعل
+      // المتصفّح يحسبها نافذة منبثقة ويحجبها.
+      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+
+      show(notifyCfg.confirm, 'ok');
+      notifyForm.reset();
+
+      if (window.JaynakAPI) window.JaynakAPI.notify(p).catch(() => {});
     });
   }
 
