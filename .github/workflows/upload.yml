@@ -1,0 +1,27 @@
+name: Upload IPA to App Store Connect
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+    upload:
+      runs-on: macos-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v3
+
+        - name: Upload to App Store Connect
+          env:
+            API_KEY_ID: ${{ secrets.API_KEY_ID }}
+            API_ISSUER_ID: ${{ secrets.API_ISSUER_ID }}
+            API_PRIVATE_KEY: ${{ secrets.API_PRIVATE_KEY }}
+          run: |
+            mkdir -p ~/.private_keys
+            echo "$API_PRIVATE_KEY" > ~/.private_keys/AuthKey_${{ secrets.API_KEY_ID }}.p8
+            
+            xcrun altool --upload-app \
+              --type ios \
+              --file "Jaynak.ipa" \
+              --apiKey "$API_KEY_ID" \
+              --apiIssuer "$API_ISSUER_ID"
